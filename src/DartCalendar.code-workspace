@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"dotnet-test-explorer.autoExpandTree": true,
+    	"dotnet-test-explorer.testProjectPath": "DartCalendar.Integration.Tests/DartCalendar.Integration.Tests.csproj"
+	}
+}

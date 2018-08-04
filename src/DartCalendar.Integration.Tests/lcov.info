@@ -1,0 +1,450 @@
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Program.cs
+FN:15,System.Void DartCalendar.Web.Program::Main(System.String[])
+FNDA:0,System.Void DartCalendar.Web.Program::Main(System.String[])
+DA:16,0
+DA:17,0
+DA:18,0
+FN:20,Microsoft.AspNetCore.Hosting.IWebHostBuilder DartCalendar.Web.Program::CreateWebHostBuilder(System.String[])
+FNDA:1,Microsoft.AspNetCore.Hosting.IWebHostBuilder DartCalendar.Web.Program::CreateWebHostBuilder(System.String[])
+DA:21,1
+DA:22,1
+LF:5
+LH:2
+BRF:0
+BRH:0
+FNF:2
+FNH:1
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Startup.cs
+FN:21,Microsoft.Extensions.Configuration.IConfiguration DartCalendar.Web.Startup::get_Configuration()
+FNDA:0,Microsoft.Extensions.Configuration.IConfiguration DartCalendar.Web.Startup::get_Configuration()
+DA:22,0
+FN:25,System.Void DartCalendar.Web.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:1,System.Void DartCalendar.Web.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:26,1
+DA:27,1
+DA:28,2
+DA:29,1
+DA:30,2
+DA:31,2
+DA:32,2
+DA:35,1
+DA:36,1
+BRDA:27,8,0,1
+BRDA:27,8,1,1
+FN:39,System.Void DartCalendar.Web.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+FNDA:1,System.Void DartCalendar.Web.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+DA:40,1
+DA:41,1
+DA:42,1
+DA:43,1
+DA:44,1
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,1
+DA:52,1
+DA:53,1
+DA:55,1
+DA:56,2
+DA:57,2
+DA:58,2
+DA:59,2
+DA:60,2
+DA:61,1
+BRDA:41,9,0,1
+BRDA:41,9,1,0
+BRDA:55,71,0,1
+BRDA:55,71,1,1
+FN:16,System.Void DartCalendar.Web.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:1,System.Void DartCalendar.Web.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
+DA:17,1
+DA:18,1
+DA:19,1
+DA:20,1
+LF:33
+LH:28
+BRF:8
+BRH:7
+FNF:4
+FNH:3
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\WebApi\LoginController.cs
+FN:10,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.WebApi.LoginController::Get()
+FNDA:1,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.WebApi.LoginController::Get()
+DA:11,1
+DA:12,1
+DA:13,1
+DA:14,1
+DA:15,1
+DA:16,1
+LF:6
+LH:6
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Models\ErrorViewModel.cs
+FN:6,System.String DartCalendar.Web.Models.ErrorViewModel::get_RequestId()
+FNDA:0,System.String DartCalendar.Web.Models.ErrorViewModel::get_RequestId()
+DA:7,0
+FN:8,System.Boolean DartCalendar.Web.Models.ErrorViewModel::get_ShowRequestId()
+FNDA:0,System.Boolean DartCalendar.Web.Models.ErrorViewModel::get_ShowRequestId()
+DA:9,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Controllers\HomeController.cs
+FN:13,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Index()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Index()
+DA:14,0
+DA:15,0
+DA:16,0
+FN:18,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::About()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::About()
+DA:19,0
+DA:20,0
+DA:22,0
+DA:23,0
+FN:25,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Contact()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Contact()
+DA:26,0
+DA:27,0
+DA:29,0
+DA:30,0
+FN:32,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Privacy()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Privacy()
+DA:33,0
+DA:34,0
+DA:35,0
+FN:38,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Error()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult DartCalendar.Web.Controllers.HomeController::Error()
+DA:39,0
+DA:40,0
+DA:41,0
+BRDA:40,14,0,0
+BRDA:40,14,1,0
+BRDA:40,26,0,0
+BRDA:40,26,1,0
+LF:17
+LH:0
+BRF:4
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\Home\About.cshtml
+FN:1,System.Void AspNetCore.Views_Home_About/<ExecuteAsync>d__0::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Home_About/<ExecuteAsync>d__0::MoveNext()
+DA:2,0
+DA:4,0
+DA:5,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\Home\Contact.cshtml
+FN:1,System.Void AspNetCore.Views_Home_Contact/<ExecuteAsync>d__0::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Home_Contact/<ExecuteAsync>d__0::MoveNext()
+DA:2,0
+DA:4,0
+DA:5,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\Home\Index.cshtml
+FN:1,System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__14::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__14::MoveNext()
+DA:2,0
+BRDA:2,200,0,0
+BRDA:2,200,1,0
+BRDA:2,391,0,0
+BRDA:2,391,1,0
+BRDA:2,494,0,0
+BRDA:2,527,0,0
+BRDA:2,527,1,0
+BRDA:2,494,1,0
+BRDA:2,780,0,0
+BRDA:2,780,1,0
+BRDA:2,972,0,0
+BRDA:2,972,1,0
+BRDA:2,1079,0,0
+BRDA:2,1112,0,0
+BRDA:2,1112,1,0
+BRDA:2,1079,1,0
+BRDA:2,1365,0,0
+BRDA:2,1365,1,0
+BRDA:2,1557,0,0
+BRDA:2,1557,1,0
+BRDA:2,1664,0,0
+BRDA:2,1697,0,0
+BRDA:2,1697,1,0
+BRDA:2,1664,1,0
+LF:1
+LH:0
+BRF:24
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\Home\Privacy.cshtml
+FN:1,System.Void AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0::MoveNext()
+DA:2,0
+DA:4,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\Shared\Error.cshtml
+FN:2,System.Void AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0::MoveNext()
+DA:3,0
+DA:9,0
+DA:10,0
+DA:12,0
+DA:14,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\Shared\_CookieConsentPartial.cshtml
+FN:3,System.Void AspNetCore.Views_Shared__CookieConsentPartial/<ExecuteAsync>d__10::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Shared__CookieConsentPartial/<ExecuteAsync>d__10::MoveNext()
+DA:4,0
+DA:5,0
+DA:6,0
+DA:9,0
+DA:10,0
+DA:28,0
+DA:41,0
+BRDA:4,14,0,0
+BRDA:5,109,0,0
+BRDA:5,109,1,0
+BRDA:6,136,0,0
+BRDA:6,136,1,0
+BRDA:9,208,0,0
+BRDA:10,561,0,0
+BRDA:10,561,1,0
+BRDA:10,666,0,0
+BRDA:10,699,0,0
+BRDA:4,14,1,0
+BRDA:10,699,1,0
+BRDA:10,666,1,0
+BRDA:9,208,1,0
+LF:7
+LH:0
+BRF:14
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\Shared\_Layout.cshtml
+FN:15,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_3>d::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_3>d::MoveNext()
+DA:16,0
+BRDA:16,8,0,0
+BRDA:16,158,0,0
+BRDA:16,158,1,0
+BRDA:16,575,0,0
+BRDA:16,8,1,0
+BRDA:16,575,1,0
+BRDA:16,678,0,0
+BRDA:16,711,0,0
+BRDA:16,8,2,0
+BRDA:16,711,1,0
+BRDA:16,678,1,0
+BRDA:16,961,0,0
+BRDA:16,961,1,0
+BRDA:16,1280,0,0
+BRDA:16,8,3,0
+BRDA:16,1280,1,0
+BRDA:16,1387,0,0
+BRDA:16,1420,0,0
+BRDA:16,8,4,0
+BRDA:16,1420,1,0
+BRDA:16,1387,1,0
+FN:5,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_0>d::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_0>d::MoveNext()
+DA:6,0
+BRDA:6,8,0,0
+BRDA:6,434,0,0
+BRDA:6,8,1,0
+BRDA:6,434,1,0
+BRDA:6,537,0,0
+BRDA:6,570,0,0
+BRDA:6,8,2,0
+BRDA:6,570,1,0
+BRDA:6,537,1,0
+BRDA:6,988,0,0
+BRDA:6,8,3,0
+BRDA:6,988,1,0
+BRDA:6,1095,0,0
+BRDA:6,1128,0,0
+BRDA:6,8,4,0
+BRDA:6,1128,1,0
+BRDA:6,1095,1,0
+FN:53,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_13>d::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_13>d::MoveNext()
+DA:54,0
+BRDA:54,8,0,0
+BRDA:54,173,0,0
+BRDA:54,173,1,0
+BRDA:54,320,0,0
+BRDA:54,8,1,0
+BRDA:54,320,1,0
+BRDA:54,423,0,0
+BRDA:54,456,0,0
+BRDA:54,8,2,0
+BRDA:54,456,1,0
+BRDA:54,423,1,0
+BRDA:54,706,0,0
+BRDA:54,706,1,0
+BRDA:54,854,0,0
+BRDA:54,8,3,0
+BRDA:54,854,1,0
+BRDA:54,961,0,0
+BRDA:54,994,0,0
+BRDA:54,8,4,0
+BRDA:54,994,1,0
+BRDA:54,961,1,0
+BRDA:54,1244,0,0
+BRDA:54,1244,1,0
+BRDA:54,1541,0,0
+BRDA:54,8,5,0
+BRDA:54,1541,1,0
+BRDA:54,1648,0,0
+BRDA:54,1681,0,0
+BRDA:54,8,6,0
+BRDA:54,1681,1,0
+BRDA:54,1648,1,0
+FN:68,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_14>d::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_14>d::MoveNext()
+DA:69,0
+BRDA:69,8,0,0
+BRDA:69,493,0,0
+BRDA:69,8,1,0
+BRDA:69,493,1,0
+BRDA:69,596,0,0
+BRDA:69,629,0,0
+BRDA:69,8,2,0
+BRDA:69,629,1,0
+BRDA:69,596,1,0
+BRDA:69,1200,0,0
+BRDA:69,8,3,0
+BRDA:69,1200,1,0
+BRDA:69,1307,0,0
+BRDA:69,1340,0,0
+BRDA:69,8,4,0
+BRDA:69,1340,1,0
+BRDA:69,1307,1,0
+BRDA:69,1590,0,0
+BRDA:69,1590,1,0
+BRDA:69,1887,0,0
+BRDA:69,8,5,0
+BRDA:69,1887,1,0
+BRDA:69,1994,0,0
+BRDA:69,2027,0,0
+BRDA:69,8,6,0
+BRDA:69,2027,1,0
+BRDA:69,1994,1,0
+FN:43,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_1>d::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__45_1>d::MoveNext()
+DA:44,0
+DA:72,0
+BRDA:44,8,0,0
+BRDA:44,543,0,0
+BRDA:44,8,1,0
+BRDA:44,543,1,0
+BRDA:44,646,0,0
+BRDA:44,679,0,0
+BRDA:44,8,2,0
+BRDA:44,679,1,0
+BRDA:44,646,1,0
+BRDA:44,1206,0,0
+BRDA:44,8,3,0
+BRDA:44,1206,1,0
+BRDA:44,1313,0,0
+BRDA:44,1346,0,0
+BRDA:44,8,4,0
+BRDA:44,1346,1,0
+BRDA:44,1313,1,0
+BRDA:44,1870,0,0
+BRDA:44,8,5,0
+BRDA:44,1870,1,0
+BRDA:44,1977,0,0
+BRDA:44,2010,0,0
+BRDA:44,8,6,0
+BRDA:44,2010,1,0
+BRDA:44,1977,1,0
+BRDA:44,2534,0,0
+BRDA:44,8,7,0
+BRDA:44,2534,1,0
+BRDA:44,2641,0,0
+BRDA:44,2674,0,0
+BRDA:44,8,8,0
+BRDA:44,2674,1,0
+BRDA:44,2641,1,0
+BRDA:44,2924,0,0
+BRDA:44,2924,1,0
+BRDA:44,3104,0,0
+BRDA:44,8,9,0
+BRDA:44,3104,1,0
+BRDA:44,3211,0,0
+BRDA:44,3244,0,0
+BRDA:44,8,10,0
+BRDA:44,3244,1,0
+BRDA:44,3211,1,0
+BRDA:44,3768,0,0
+BRDA:44,8,11,0
+BRDA:44,3768,1,0
+BRDA:44,3876,0,0
+BRDA:44,3909,0,0
+BRDA:44,8,12,0
+BRDA:44,3909,1,0
+BRDA:44,3876,1,0
+BRDA:44,4328,0,0
+BRDA:44,8,13,0
+BRDA:44,4328,1,0
+BRDA:44,4436,0,0
+BRDA:44,4469,0,0
+BRDA:44,8,14,0
+BRDA:44,4469,1,0
+BRDA:44,4436,1,0
+LF:6
+LH:0
+BRF:155
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:c:\CJRRepos\DartCalendar\DartCalendar.Web\Views\_ViewStart.cshtml
+FN:1,System.Void AspNetCore.Views__ViewStart/<ExecuteAsync>d__0::MoveNext()
+FNDA:0,System.Void AspNetCore.Views__ViewStart/<ExecuteAsync>d__0::MoveNext()
+DA:2,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
