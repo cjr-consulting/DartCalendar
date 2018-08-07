@@ -9,9 +9,9 @@
            "type": "coreclr",
            "request": "launch",
            "preLaunchTask": "build",
-           "program": "${workspaceRoot}/bin/Debug/dotnetcore2.1/DartCalendar.Web.dll",
+           "program": "${workspaceRoot}/DartCalendar.Web/bin/Debug/netcoreapp2.1/DartCalendar.Web.dll",
            "args": [],
-           "cwd": "${workspaceRoot}",
+           "cwd": "${workspaceRoot}/DartCalendar.Web",
            "stopAtEntry": false,
            "launchBrowser": {
                "enabled": true,
@@ -40,7 +40,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/DartCalendar.Integration/bin/Debug/netcoreapp2.1/DartCalendar.Integration.dll",
+            "program": "${workspaceFolder}/DartCalendar.Integration.Tests/bin/Debug/netcoreapp2.1/DartCalendar.Integration.Tests.dll",
             "args": [],
             "cwd": "${workspaceFolder}/DartCalendar.Integration",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window

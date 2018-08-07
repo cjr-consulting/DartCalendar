@@ -27,7 +27,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DartCalendar.Integration/DartCalendar.Main.Tests.csproj"
+                "${workspaceFolder}/DartCalendar.Main.Tests/DartCalendar.Main.Tests.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
