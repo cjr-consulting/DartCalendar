@@ -12,6 +12,7 @@ module.exports = (env) => {
         entry: {
             "vendor": [
                 'vuetify/dist/vuetify.min.css',
+                'event-source-polyfill',
                 'vue',
                 'vue-router'
             ],

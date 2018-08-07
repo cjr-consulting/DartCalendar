@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    You have loaded the app. <div v-model="name"></span>
+    You have loaded the app. <div>{{name}}</div>
   </div>
 </template>
 <script src="./app.ts"></script>
