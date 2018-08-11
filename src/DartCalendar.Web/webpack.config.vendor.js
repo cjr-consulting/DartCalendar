@@ -7,6 +7,7 @@ module.exports = (env) => {
     const extractCSS = new ExtractTextPlugin('vendor.css');
 
     return [{
+        mode: isDevBuild ? 'development': 'production',
         stats: { modules: false },
         resolve: { extensions: ['.js'] },
         entry: {

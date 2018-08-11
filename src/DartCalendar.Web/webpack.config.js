@@ -10,15 +10,15 @@ module.exports = (env) => {
     const extractLESS = new ExtractTextPlugin('site.css');
 
     return [{
-        
+        mode: isDevBuild ? 'development': 'production',
         stats: { modules: false },
         context: __dirname,
         resolve: {
-            extensions: ['.vue', '.ts', '.js'],
+            extensions: ['.vue', '.ts', '.js', '.scss'],
             modules: [path.resolve(__dirname), "node_modules"]
         },
         entry: {
-            'main': ['babel-polyfill', './ClientApp/app.ts'],
+            'main': ['whatwg-fetch', 'babel-polyfill', './ClientApp/app.ts'],
             'admin' : ['./ClientApp/admin.ts']},
         module: {
             rules: [
@@ -41,7 +41,24 @@ module.exports = (env) => {
                     test: /\.less$/,
                     use: extractLESS.extract(['css-loader', 'less-loader'])
                 },
-                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
+                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
+                {
+                    test: /\.(scss)$/,
+                    use: [
+                      {
+                        // Adds CSS to the DOM by injecting a `<style>` tag
+                        loader: 'style-loader'
+                      },
+                      {
+                        // Interprets `@import` and `url()` like `import/require()` and will resolve them
+                        loader: 'css-loader'
+                      },
+                      {
+                        // Loads a SASS/SCSS file and compiles it to CSS
+                        loader: 'sass-loader'
+                      }
+                    ]
+                }
             ]
         },
         output: {

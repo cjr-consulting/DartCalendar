@@ -1,3 +1,5 @@
+import "Content/scss/app.scss";
+import "bootstrap";
 import Vue from "vue";
 import VueRouter from "vue-router";
 // require("../wwwroot/content/less/site.less");
@@ -27,5 +29,5 @@ export default new Vue({
     el: "#app-root",
     store,
     router: new VueRouter({ mode: "history", routes: routes }),
-    render: h => h(require("./components/app/app.vue").default)
+    render: h => h(require("./pages/home/home.vue").default)
 });
