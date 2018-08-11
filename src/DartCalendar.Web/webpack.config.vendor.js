@@ -15,7 +15,9 @@ module.exports = (env) => {
                 'vuetify/dist/vuetify.min.css',
                 'event-source-polyfill',
                 'vue',
-                'vue-router'
+                'vue-router',
+                'jquery',
+                'bootstrap'
             ],
         },
         module: {
