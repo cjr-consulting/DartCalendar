@@ -1,3 +1,3 @@
-export interface BaseState {
+export interface IBaseState {
     version: string;
 }

@@ -2,7 +2,6 @@ import "Content/scss/app.scss";
 import "bootstrap";
 import Vue from "vue";
 import VueRouter from "vue-router";
-// require("../wwwroot/content/less/site.less");
 import store from "./store";
 import { routes } from "./app-routes";
 import axios, { AxiosResponse } from "axios";

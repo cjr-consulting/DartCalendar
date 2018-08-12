@@ -1,28 +1,20 @@
 import Vue from "vue";
 import Component from "vue-class-component";
+import { State, Action, Getter } from "vuex-class";
+import * as types from "ClientApp/store/DartEvent/types";
 
+const namespace: string = "dartevent";
 @Component
-export default class AppComponent extends Vue {
-    dartEvents: Array<DartEvent>;
-    name: string = "component-data";
+export default class HomeComponent extends Vue {
+    @State("dartevent") DartEvent!: types.IDartEventState;
+    @Action(types.FETCH_DARTEVENTS, { namespace }) fetchDartEvents: any;
+    @Getter(types.GET_DARTEVENTS, { namespace }) dartEvents!: Array<types.IDartEvent>;
 
-    constructor(){
+    constructor() {
         super();
-        this.dartEvents = new Array<DartEvent>();
     }
 
-    bind(){
-        this.dartEvents.push(new DartEvent("event 1", "address 1"));
-        this.dartEvents.push(new DartEvent("event 2", "address 2"));
-        this.dartEvents.push(new DartEvent("event 3", "address 3"));
-    }
-}
-
-class DartEvent {
-    name: string;
-    address: string;
-    constructor(name: string, address: string){
-        this.name = name;
-        this.address = address;
+    mounted(): void {
+        this.fetchDartEvents();
     }
 }

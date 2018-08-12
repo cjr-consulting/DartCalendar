@@ -1,15 +1,17 @@
 import Vue from "vue";
 import Vuex, { StoreOptions } from "vuex";
-import { BaseState } from "./types";
+import { IBaseState } from "./types";
+import { dartevent } from "./DartEvent";
 
 Vue.use(Vuex);
 
-const store: StoreOptions<BaseState> = {
+const store: StoreOptions<IBaseState> = {
     state: {
         version: "1.0.0"
     },
     modules: {
+        dartevent
     }
 };
 
-export default new Vuex.Store<BaseState>(store);
+export default new Vuex.Store<IBaseState>(store);
