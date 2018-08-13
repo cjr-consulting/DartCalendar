@@ -12,6 +12,8 @@ export default class HomeComponent extends Vue {
 
     constructor() {
         super();
+
+        
     }
 
     mounted(): void {
