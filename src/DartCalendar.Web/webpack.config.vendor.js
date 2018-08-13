@@ -17,7 +17,8 @@ module.exports = (env) => {
                 'vue',
                 'vue-router',
                 'jquery',
-                'bootstrap'
+                'bootstrap',
+                'reflect-metadata'
             ],
         },
         module: {

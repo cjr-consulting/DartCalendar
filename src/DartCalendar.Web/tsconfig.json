@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "module": "es2015",
     "moduleResolution": "node",
     "skipDefaultLibCheck": true,
@@ -13,7 +14,8 @@
       //"vue-tables-2": [ "Custom-Typings/vue-tables-2.d.ts" ]
     
     },
-    "lib": ["es2015", "dom"]
+    "lib": ["es2015", "dom", "es6"],
+    // "types": ["reflect-metadata"]
   },
   "exclude": [
     "bin",

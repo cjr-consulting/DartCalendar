@@ -1,5 +1,5 @@
 <template>
-  <div class="border-it">
+  <div>
     <div class="row search-row">
       <div class="col-sm">
         <div>

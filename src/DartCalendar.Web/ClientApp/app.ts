@@ -5,8 +5,19 @@ import VueRouter from "vue-router";
 import store from "./store";
 import { routes } from "./app-routes";
 import axios, { AxiosResponse } from "axios";
+import { locator } from "./utility/servicelocator";
+
+import { Container } from "inversify";
+import "reflect-metadata";
+import { IDartEventDataService } from "./dataservices/IDartEventDataService";
+import { DartEventDataService } from "./dataservices/DartEventDataService";
+
 
 Vue.use(VueRouter);
+
+let container: Container = new Container();
+container.bind<IDartEventDataService>("IDartEventDataService").to(DartEventDataService);
+locator.setContainer(container);
 
 /*
 axios.interceptors.response.use(

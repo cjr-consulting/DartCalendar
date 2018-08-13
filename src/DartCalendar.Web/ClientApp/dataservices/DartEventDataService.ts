@@ -1,7 +1,10 @@
 import Axios from "axios";
 import * as types from "../store/DartEvent/types";
+import { IDartEventDataService } from "./IDartEventDataService";
+import { injectable, inject } from "inversify";
 
-export class DartEventDataService {
+@injectable()
+export class DartEventDataService implements IDartEventDataService {
     getDartEvents(): Promise<Array<types.IDartEvent>> {
         let promise: Promise<Array<types.IDartEvent>> =
             new Promise<Array<types.IDartEvent>>(resolve => {
