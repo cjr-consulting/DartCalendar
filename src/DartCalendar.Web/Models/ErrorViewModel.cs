@@ -1,4 +1,4 @@
-namespace DartCalendar.Web.Models
+﻿namespace DartCalendar.Web.Models
 {
     using System;
 

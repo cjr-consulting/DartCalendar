@@ -1,27 +1,39 @@
-using System.Net.Http;
-using System.Threading.Tasks;
-using DartCalendar.Integration.Tests.Helpers;
-using DartCalendar.Web;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Newtonsoft.Json;
-using Shouldly;
-using Xunit;
-
-namespace DartCalendar.Integration.Tests
+﻿namespace DartCalendar.Integration.Tests
 {
+    using System;
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using Helpers;
+    using Microsoft.AspNetCore.Mvc.Testing;
+    using Newtonsoft.Json;
+    using Shouldly;
+    using Web;
+    using Xunit;
+
     public class LoginApiShould
         : IClassFixture<WebApplicationFactory<Startup>>
     {
+        private static readonly User LOGGED_IN_USER = new User("user@email.io", "1", "token");
+        private readonly HttpClient _client;
+
         public LoginApiShould(WebApplicationFactory<Startup> factory)
         {
             _client = factory.CreateClient();
         }
 
-        private readonly HttpClient _client;
+        [Fact]
+        public async Task ReturnUserAfterLogin()
+        {
+            var response = await _client.GetAsync(new Uri("/api/Login"));
 
-        private readonly User LOGGED_IN_USER = new User("user@email.io", "1", "token");
+            response.EnsureSuccessStatusCode();
 
-        private string withJsonContaining(User loginUser)
+            response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
+            var responseBody = await response.Content.ReadAsStringAsync();
+            responseBody.ShouldBe(WithJsonContaining(LOGGED_IN_USER));
+        }
+
+        private string WithJsonContaining(User loginUser)
         {
             var json = JsonConvert.SerializeObject(
                 new
@@ -30,36 +42,9 @@ namespace DartCalendar.Integration.Tests
                     loginUser.Id,
                     loginUser.Token
                 },
-                Json.GetSettings()
-            );
+                Json.GetSettings());
+
             return json;
         }
-
-        [Fact]
-        public async Task ReturnUserAfterLogin()
-        {
-            var response = await _client.GetAsync("/api/Login");
-
-            response.EnsureSuccessStatusCode();
-
-            response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
-            var responseBody = await response.Content.ReadAsStringAsync();
-            responseBody.ShouldBe(withJsonContaining(LOGGED_IN_USER));
-        }
-    }
-
-    public class User
-    {
-        public User(string username, string id, string token)
-        {
-            Username = username;
-            Id = id;
-            Token = token;
-        }
-
-        public string Token { get; set; }
-
-        public string Username { get; set; }
-        public string Id { get; set; }
     }
 }

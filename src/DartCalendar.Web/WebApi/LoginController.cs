@@ -1,4 +1,4 @@
-namespace DartCalendar.Web.WebApi
+﻿namespace DartCalendar.Web.WebApi
 {
     using System;
     using System.Threading.Tasks;

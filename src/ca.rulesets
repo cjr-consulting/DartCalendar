@@ -81,5 +81,6 @@
     <Rule Id="SX1309" Action="Error" />
     <Rule Id="SA1652" Action="None" />
     <Rule Id="SA1633" Action="None" />
+    <Rule Id="SA1516" Action="None" />
   </Rules>
 </RuleSet>

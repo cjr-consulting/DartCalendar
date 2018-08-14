@@ -1,6 +1,6 @@
-namespace DartCalendar.Main.Users.Models
+﻿namespace DartCalendar.Main.Users.Models
 {
-    public class Users
+    public class User
     {
         public string Id { get; set; }
         public string Username { get; set; }

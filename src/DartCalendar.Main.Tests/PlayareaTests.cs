@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-
-namespace DartCalendar.Main.Tests
+﻿namespace DartCalendar.Main.Tests
 {
+    using Xunit;
+
     public class PlayareaTests
     {
         [Fact]
         public void TestingConstruction()
         {
-            
         }
     }
 }

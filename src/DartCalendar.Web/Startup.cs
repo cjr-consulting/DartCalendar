@@ -1,4 +1,4 @@
-namespace DartCalendar.Web
+﻿namespace DartCalendar.Web
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
