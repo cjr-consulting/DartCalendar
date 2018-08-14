@@ -1,26 +1,38 @@
-using System;
 using System.Net.Http;
-using Xunit;
 using System.Threading.Tasks;
+using DartCalendar.Integration.Tests.Helpers;
+using DartCalendar.Web;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using Shouldly;
-using DartCalendar.Integration.Tests.Helpers;
+using Xunit;
 
 namespace DartCalendar.Integration.Tests
 {
-    public class LoginAPIShould 
-        : IClassFixture<WebApplicationFactory<DartCalendar.Web.Startup>>
+    public class LoginApiShould
+        : IClassFixture<WebApplicationFactory<Startup>>
     {
-        private WebApplicationFactory<DartCalendar.Web.Startup> _factory;
-        private HttpClient _client;
-
-        private User LOGGED_IN_USER = new User("user@email.io", "1");
-
-        public LoginAPIShould(WebApplicationFactory<DartCalendar.Web.Startup> factory)
+        public LoginApiShould(WebApplicationFactory<Startup> factory)
         {
-            _factory = factory;            
-            _client = _factory.CreateClient();
+            _client = factory.CreateClient();
+        }
+
+        private readonly HttpClient _client;
+
+        private readonly User LOGGED_IN_USER = new User("user@email.io", "1", "token");
+
+        private string withJsonContaining(User loginUser)
+        {
+            var json = JsonConvert.SerializeObject(
+                new
+                {
+                    loginUser.Username,
+                    loginUser.Id,
+                    loginUser.Token
+                },
+                Json.GetSettings()
+            );
+            return json;
         }
 
         [Fact]
@@ -34,27 +46,18 @@ namespace DartCalendar.Integration.Tests
             var responseBody = await response.Content.ReadAsStringAsync();
             responseBody.ShouldBe(withJsonContaining(LOGGED_IN_USER));
         }
-
-        private string withJsonContaining(User loginUser)
-        {
-            var json = JsonConvert.SerializeObject(
-                new {
-                    Username = loginUser.Username,
-                    Id = loginUser.Id
-                    },
-                Json.GetSettings()
-                );
-            return json;
-        }
     }
 
     public class User
     {
-        public User(string username, string id)
+        public User(string username, string id, string token)
         {
             Username = username;
             Id = id;
+            Token = token;
         }
+
+        public string Token { get; set; }
 
         public string Username { get; set; }
         public string Id { get; set; }
