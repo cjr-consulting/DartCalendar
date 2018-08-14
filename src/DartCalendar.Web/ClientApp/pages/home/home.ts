@@ -11,9 +11,10 @@ export default class HomeComponent extends Vue {
     @Getter(types.GET_DARTEVENTS, { namespace }) dartEvents!: Array<types.IDartEvent>;
 
     constructor() {
-        super();
+        super();    
 
-        
+
+            
     }
 
     mounted(): void {
