@@ -1,11 +1,10 @@
 import { MutationTree } from "vuex";
 import { IDartEvent } from "./types";
 
-import { SET_DARTEVENTS, IDartEventState } from "./types";
-
+import { IDartEventState, SET_DARTEVENTS } from "./types";
 
 export const mutations: MutationTree<IDartEventState> = {
-    [SET_DARTEVENTS](state: IDartEventState, payload:Array<IDartEvent>):void {
+    [SET_DARTEVENTS](state: IDartEventState, payload: IDartEvent[]): void {
         state.dartEvents = payload;
     },
 

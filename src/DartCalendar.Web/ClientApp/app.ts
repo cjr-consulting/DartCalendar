@@ -1,21 +1,21 @@
-import "Content/scss/app.scss";
+
 import "bootstrap";
+import "Content/scss/app.scss";
 import Vue from "vue";
 import VueRouter from "vue-router";
-import store from "./store";
 import { routes } from "./app-routes";
-import axios, { AxiosResponse } from "axios";
+import store from "./store";
+// import axios, { AxiosResponse } from "axios";
 import { locator } from "./utility/servicelocator";
 
 import { Container } from "inversify";
 import "reflect-metadata";
-import { IDartEventDataService } from "./dataservices/IDartEventDataService";
 import { DartEventDataService } from "./dataservices/DartEventDataService";
-
+import { IDartEventDataService } from "./dataservices/IDartEventDataService";
 
 Vue.use(VueRouter);
 
-let container: Container = new Container();
+const container: Container = new Container();
 container.bind<IDartEventDataService>("IDartEventDataService").to(DartEventDataService);
 locator.setContainer(container);
 
@@ -37,7 +37,7 @@ axios.interceptors.response.use(
 
 export default new Vue({
     el: "#app-root",
+    render: (h) => h(require("./pages/home/home.vue").default),
+    router: new VueRouter({ mode: "history", routes }),
     store,
-    router: new VueRouter({ mode: "history", routes: routes }),
-    render: h => h(require("./pages/home/home.vue").default)
 });

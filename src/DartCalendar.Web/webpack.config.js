@@ -23,6 +23,16 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
+                    test: /\.ts$/,
+                    enforce: 'pre',
+                    use: [
+                        {
+                            loader: 'tslint-loader',
+                            options: { /* Loader options go here */ }
+                        }
+                    ]
+                },
+                {
                     test: /\.vue$/,
                     include: /ClientApp/,
                     loader: 'vue-loader',
