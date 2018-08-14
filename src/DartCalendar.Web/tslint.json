@@ -1,0 +1,15 @@
+{
+    "extends": "tslint:recommended",
+    //"defaultSeverity": "warning",
+    "rules": {
+        "max-line-length": {
+            "options": [120]
+        },
+        "member-access": false
+    },
+    "jsRules": {
+        "max-line-length": {
+            "options": [120]
+        }
+    }
+}

@@ -31,5 +31,5 @@ let authorized = new Authorized();
 export const routes:
  RouteConfig[] =
     [
-        { path: "/", component: require("./pages/home/home.vue").default }
+        { path: "/", component: require("./pages/home/home.vue").default },
     ];
