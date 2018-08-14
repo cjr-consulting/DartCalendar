@@ -1,7 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <CodeAnalysisRuleSet>../ca.rulesets</CodeAnalysisRuleSet>
   </PropertyGroup>
-
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2"/>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.1"/>
+  </ItemGroup>
 </Project>
