@@ -1,4 +1,4 @@
-﻿namespace DartCalendar.Main
+﻿namespace DartCalendar.Core
 {
     public abstract class Entity
     {

@@ -1,4 +1,7 @@
-﻿namespace DartCalendar.Web.WebApi
+﻿using DartCalendar.Core.Domain;
+using DartCalendar.Core.Domain.Models;
+
+namespace DartCalendar.Web.WebApi
 {
     using System;
     using System.Threading.Tasks;
@@ -7,13 +10,24 @@
     [Route("api/Login")]
     public class LoginController : Controller
     {
-        public IActionResult Get()
+        private readonly IDartEventRepository _repository;
+
+        public LoginController(IDartEventRepository repository)
         {
-            return Json(new
-            {
-                Username = "user@email.io",
-                Id = "1"
-            });
+            _repository = repository;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(DartEvent dartEvent)
+        {
+            _repository.Add(dartEvent);
+            return Ok();
+        }
+
+        public async Task<IActionResult> Get()
+        {
+            var events = await _repository.GetFutureEventsAsync(5);
+            return Ok(events);
         }
     }
 }

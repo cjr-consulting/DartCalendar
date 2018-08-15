@@ -1,4 +1,4 @@
-﻿namespace DartCalendar.Main.Tests
+﻿namespace DartCalendar.Core.Tests
 {
     using Xunit;
 

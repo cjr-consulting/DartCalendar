@@ -1,4 +1,4 @@
-﻿namespace DartCalendar.Main.Users.Models
+﻿namespace DartCalendar.Core.Users.Models
 {
     public class User
     {

@@ -1,4 +1,9 @@
-﻿namespace DartCalendar.Web
+﻿using DartCalendar.Core.Domain;
+using DartCalendar.Infrastructure.DartCalendar;
+using DartCalendar.Infrastructure.DartCalendar.Repositories;
+using Microsoft.EntityFrameworkCore;
+
+namespace DartCalendar.Web
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -26,6 +31,9 @@
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddDbContext<DartCalendarContext>(
+                options => options.UseInMemoryDatabase("Test_area"));
+            services.AddScoped<IDartEventRepository, DartEventRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

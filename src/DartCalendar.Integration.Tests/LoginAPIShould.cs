@@ -1,4 +1,6 @@
-﻿namespace DartCalendar.Integration.Tests
+﻿using System.Net;
+
+namespace DartCalendar.Integration.Tests
 {
     using System;
     using System.Net.Http;
@@ -22,15 +24,23 @@
         }
 
         [Fact]
-        public async Task ReturnUserAfterLogin()
+        public async Task GetEvents()
         {
-            var response = await _client.GetAsync(new Uri("/api/Login"));
+            var response = await _client.GetAsync("/api/Login");
 
             response.EnsureSuccessStatusCode();
 
             response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
             var responseBody = await response.Content.ReadAsStringAsync();
-            responseBody.ShouldBe(WithJsonContaining(LOGGED_IN_USER));
+            responseBody.ShouldBe("[]");
+        }
+
+        [Fact]
+        public async Task SaveEvent()
+        {
+            var d = new StringContent("{\"Id\": 1, \"Name\": \"Name It\" }");
+            var response = await _client.PostAsync("/api/login", d);
+            response.StatusCode.ShouldBe(HttpStatusCode.OK);
         }
 
         private string WithJsonContaining(User loginUser)
